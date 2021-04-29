@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #001dd9;
+  font-family: sans-serif;
+}
+
+/* LANDING SECTION */
+.landing-section {
+  padding: 10%;
+  display: grid;
+  height: 100vh;
+  text-align: center;
+  place-items: center;
+  margin-bottom: 100px;
+  box-shadow: 20px 20px 61px #0019b8, -20px -20px 61px #0021fa;
+}
+
+.landing-section h1 {
+  font-size: 150px;
+  color: #000e6d;
+}
+
+/* TIMELINE SECTION */
+.timeline-section {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid: repeat(4, 1fr) / 1fr 10% 1fr;
+}
+
+.timeline-section .timeline-line {
+  width: 10px;
+  height: 100%;
+  border-radius: 5px;
+  grid-row: 1 / 5;
+  grid-column-start: 2;
+  box-shadow: 20px 20px 61px #000c5d, -20px -20px 61px #00107d;
+}
+
+.timeline-section .timeline-item {
+  margin: 5%;
+  padding: 10%;
+  border-radius: 5px;
+  background: #1530e7;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 20px 20px 61px #000c5d, -20px -20px 61px #00107d;
+}
+
+.timeline-section .timeline-item h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.timeline-section .timeline-item h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.timeline-section .item-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.timeline-section .item-2 {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.timeline-section .item-3 {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.timeline-section .item-4 {
+  grid-row: 4;
+  grid-column: 3;
+}
+
+/* MOBILE RESPONSIVENESS  MAX-WIDTH: 800PX*/
+@media screen and (max-width: 800px) {
+  /* LANDING SECTION */
+  .landing-section h1 {
+    font-size: 100px;
+  }
+
+  /* TIMELINE SECTION */
+  .timeline-section {
+    grid: repeat(4, 1fr) / 10% 1fr;
+  }
+
+  .timeline-section .timeline-line {
+    grid-column: 1;
+  }
+
+  .timeline-section .item-1 {
+    grid-column: 2;
+  }
+
+  .timeline-section .item-2 {
+    grid-column: 2;
+  }
+
+  .timeline-section .item-3 {
+    grid-column: 2;
+  }
+
+  .timeline-section .item-4 {
+    grid-column: 2;
+  }
+}
+
+/* MOBILE RESPONSIVENESS  MAX-WIDTH: 500PX*/
+@media screen and (max-width: 500px) {
+  /* LANDING SECTION */
+  .landing-section h1 {
+    font-size: 80px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS  MAX-WIDTH: 450PX*/
+@media screen and (max-width: 450px) {
+  /* LANDING SECTION */
+  .landing-section h1 {
+    font-size: 50px;
+  }
+}
